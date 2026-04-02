@@ -1,0 +1,172 @@
+:root {
+  --primary:#00ffaa;
+  --accent:#ff4da6;
+  --bg:#060606;
+  --card:#121212;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  background:radial-gradient(circle at top, #0a0a0a, #050505);
+  color:#fff;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+  z-index:999;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+nav h1{color:var(--primary);font-weight:800;}
+nav a{
+  color:#fff;
+  margin-left:25px;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+nav a:hover{color:var(--primary);}
+
+.hero{
+  height:100vh;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.7), #050505),
+    url('../images/VANCY-DP-2.jpg') center/cover;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h2{
+  font-size:55px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero a{
+  margin-top:25px;
+  padding:15px 35px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  border-radius:30px;
+  color:#000;
+  font-weight:700;
+  text-decoration:none;
+  transition:0.3s;
+}
+.hero a:hover{
+  transform:scale(1.05);
+}
+
+.section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:50px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.about, .services, .mixes-grid{
+  display:grid;
+  gap:25px;
+}
+
+.about{
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+}
+.about img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 0 40px rgba(0,255,170,0.15);
+}
+.about p{
+  color:#bbb;
+  line-height:1.8;
+  margin-bottom:15px;
+}
+
+.services{
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+.service{
+  background:rgba(255,255,255,0.05);
+  border-radius:20px;
+  padding:25px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+.service:hover{
+  transform:translateY(-10px);
+  border:1px solid var(--primary);
+}
+.service h3{margin-bottom:10px;color:var(--primary);}
+.service p{color:#aaa;font-size:14px;line-height:1.6;}
+
+.mixes-grid{
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+}
+.mix-card{
+  background:var(--card);
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.3s;
+}
+.mix-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px rgba(0,255,170,0.2);
+}
+.mix-card iframe{
+  width:100%;
+  height:200px;
+  border:none;
+}
+.mix-card p{
+  padding:15px;
+  font-size:14px;
+  color:#ccc;
+}
+
+.booking{text-align:center;}
+.booking p{color:#bbb;}
+.booking a{
+  display:inline-block;
+  margin-top:25px;
+  padding:15px 35px;
+  background:#25D366;
+  border-radius:30px;
+  color:#fff;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  background:#000;
+  color:#777;
+}
+
+@media(max-width:768px){
+  .hero h2{font-size:35px;}
+  .about{grid-template-columns:1fr;}
+}
